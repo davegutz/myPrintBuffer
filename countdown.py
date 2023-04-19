@@ -1,5 +1,7 @@
 from time import sleep
+import os
 
+os.environ['PYTHONUNBUFFERED'] = 'True'
 for i in range(3, 0, -1):
     print(i)  # run in terminal with and without -u
     # print(f"{i}\n", end="")
@@ -9,3 +11,5 @@ for i in range(3, 0, -1):
     # print(i, flush=True)  # run in terminal
     sleep(1)
 print("Go!")
+os.environ['PYTHONUNBUFFERED'] = ''
+
